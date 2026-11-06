@@ -1,0 +1,149 @@
+/* Сброс стандартных отступов браузера */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Контейнер: ограничивает ширину содержимого и центрирует его */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 1. Хедер: цельный блок на всю ширину */
+.header {
+  background: #dcd3c4;
+  padding: 20px 0;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.nav a {
+  color: #4b2203;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  -webkit-text-stroke: 1px #fcfbfb;
+}
+
+/* 2. Основной блок */
+.main {
+  flex: 1;
+  padding: 60px 0;
+  background-color: #f4f4f4;
+  /* Эти косточки мне сделал Claude путём математических фигур... */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg transform='rotate(-45 30 30)' fill='%23dcd3c4'%3E%3Crect x='16' y='27' width='28' height='6' rx='3'/%3E%3Ccircle cx='15' cy='26' r='4'/%3E%3Ccircle cx='15' cy='34' r='4'/%3E%3Ccircle cx='45' cy='26' r='4'/%3E%3Ccircle cx='45' cy='34' r='4'/%3E%3C/g%3E%3C/svg%3E"); 
+  background-repeat: repeat;
+  background-size: 60px 60px;
+}
+
+/* 3. Футер */
+.footer {
+  background: #dcd3c4;
+  color: #4b2203;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.resume-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: 100px;          /* место слева, куда выйдет фото */
+  padding: 60px 40px;
+  background: #fff;
+  border: 2px solid #4a2a0a;
+  border-radius: 16px;
+}
+
+.resume-photo {
+  width: 420px;
+  flex-shrink: 0;
+  margin-left: -140px;         /* вытаскивает фото за край карточки */
+  border: 1px solid #222;
+  border-radius: 14px;
+}
+
+.resume-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.resume-text h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.resume-text p {
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.resume-text h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.resume-text ul {
+  padding-left: 22px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.card {
+  background: #fff;
+  border: 2px solid #4a2a0a;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+
+
+.like-box {
+  display: flex;
+  flex-direction: column;   /* кнопка сверху, сообщение под ней */
+  align-items: center;      /* центрирует по горизонтали */
+  margin-top: 14px;
+}
+
+.like-btn {
+  margin-top: 0px;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #4a2a0a;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.like-btn:hover {
+  background: #6b4a2a;
+}
+
+.like-message {
+  min-height: 0em;
+  margin-top: 0px;
+  color: #4a2a0a; 
+}
