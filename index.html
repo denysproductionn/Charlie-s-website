@@ -2,68 +2,85 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charlie's resume</title>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <center>
-
-            <nav>
+    <header class="header">
+        <div class="container">
+            
+            <nav class="nav">
                 <a href="pages/contact.html">Contacts</a>
-                &nbsp; | &nbsp;
                 <a href="pages/gallery.html">Professional gallery</a>
             </nav>    
-        
 
-            <h1>Hello! My name is Charlie and this is my best resume!</h1>
+            <div class="like-box">
+                <button id="likeBtn" class="like-btn">Нажми, если я тебе нравлюсь</button>
+                    <p id="likeMessage" class="like-message"></p>
+            </div>
 
-        </center>
 
-        <h2>Specialization - Professional socks destroyer</h2>
-        
-        <table>
-            <tr>
-                <td>
-                    <img src="photo/Charlie.jpg" width="300" height="350">
-                </td>
+        </div>
+    </header>
 
-                <td valign="top">
+<main class="main">
+    <div class="container">
+        <section class="resume-card">
+            <img class="resume-photo" src="photo/Charlie.jpg" alt="Charlie">
+
+            <div class="resume-text">
+                <h1>Hello! My name is Charlie and this is my best resume!</h1>
+                <h2>Specialization - Professional socks destroyer</h2>
+
                     <p>
-                        Charlie is not just an ordinary dog. He is a highly trained professional socks destroyer with over 3 years of experience in theft, property damage, and escaping from crime scenes. <br>
-                        His main responsibilities include stealing socks from laundry baskets, chewing them into unrecognizable pieces, and running away whenever someone mentions the word "police". <br>
-                        Despite numerous complaints from his owners, Charlie has never shown any signs of remorse. He considers every stolen sock a personal achievement and every destroyed slipper a masterpiece. <br><br>
-                        
+                        Charlie is not just an ordinary dog. He is a highly trained professional socks destroyer with over 3 years of experience in theft, property damage, and escaping from crime scenes.
+                        His main responsibilities include stealing socks from laundry baskets, chewing them into unrecognizable pieces, and running away whenever someone mentions the word "police".
+                        Despite numerous complaints from his owners, Charlie has never shown any signs of remorse. <br>He considers every stolen sock a personal achievement and every destroyed slipper a masterpiece.
+                    </p>
+
                         <h3>His special skills include:</h3>
-                            <ol>
+                            <ul>
                                 <li>Professional sock theft and destruction.</li>
                                 <li>Speed running away from angry owners.</li>
                                 <li>Looking innocent after committing a crime.</li>
                                 <li>Sleeping on the job for up to 18 hours.</li>
                                 <li>Avoiding eye contact during interrogations.</li>
-                            </ol>
+                            </ul>
+                        <p>
+                            <strong>Current status:</strong> Wanted, but extremely adorable.<br>
+                            <strong>Career goal:</strong> To become the world's number one sock destroyer.
+                        </p> 
 
-                        <h3><i>Current status: Wanted, but extremely adorable.</i></h3>
-                        <h3><i>Career goal: To become the world's number one sock destroyer.</i></h3>
+            </section>
+        </div>
+    </div>
+</main>
 
-                    </p>
-                </td>
-            </tr>
-        </table>          
-    </header>
+<script>
+    const button = document.getElementById("likeBtn");
+    const message = document.getElementById("likeMessage");
 
-<footer>
-        <hr>
+    button.addEventListener("click", function () {
+    message.textContent = "С вашей карты успешно списано $10.000 мне на вкусняшки, спасибо!";
+
+    setTimeout(function () {
+    message.textContent = "";
+  }, 4000);
+});
+</script>
+
+
+<footer class="footer">
+    <div class="container">
             <center>
                 <p>© 2026 Charlie's Website. All rights reserved.</p>
             </center>
-        </hr>
-    </footer>
+    </div>
+</footer>
 
 </body>
 
